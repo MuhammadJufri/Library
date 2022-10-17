@@ -14,14 +14,20 @@
       </div>
     </header>
     <main>
-      <button>+ Add book</button>
+      <button class="addNewBook">+ Add book</button>
       <div class="overlay"></div>
       <div class="modal-box">
         <h2>Add new book</h2>
-        <form action="" method="get">
-          <input type="text" placeholder="Title" required />
-          <input type="text" placeholder="Author" required />
-          <input type="number" placeholder="Pages" min="1" required />
+        <form action="" method="get" class="submitNewBookData">
+          <input type="text" placeholder="Title" class="title" required />
+          <input type="text" placeholder="Author" class="author" required />
+          <input
+            type="number"
+            placeholder="Pages"
+            min="1"
+            class="pages"
+            required
+          />
           <div class="check-list">
             <span>Have you read it?</span>
             <input type="checkbox" />
@@ -30,75 +36,9 @@
         </form>
       </div>
 
-      <ul>
-        <li>
-          <div class="book-info">
-            <span>"Title"</span>
-            <span>Author</span>
-            <span>Page</span>
-          </div>
-          <div class="book-buttons">
-            <button>Read</button>
-            <button>Remove</button>
-          </div>
-        </li>
-
-        <li>
-          <div class="book-info">
-            <span>"Title"</span>
-            <span>Author</span>
-            <span>Page</span>
-          </div>
-          <div class="book-buttons">
-            <button>Read</button>
-            <button>Remove</button>
-          </div>
-        </li>
-        <li>
-          <div class="book-info">
-            <span>"Title"</span>
-            <span>Author</span>
-            <span>Page</span>
-          </div>
-          <div class="book-buttons">
-            <button>Read</button>
-            <button>Remove</button>
-          </div>
-        </li>
-        <li>
-          <div class="book-info">
-            <span>"Title"</span>
-            <span>Author</span>
-            <span>Page</span>
-          </div>
-          <div class="book-buttons">
-            <button>Read</button>
-            <button>Remove</button>
-          </div>
-        </li>
-        <li>
-          <div class="book-info">
-            <span>"Title"</span>
-            <span>Author</span>
-            <span>Page</span>
-          </div>
-          <div class="book-buttons">
-            <button>Read</button>
-            <button>Remove</button>
-          </div>
-        </li>
-        <li>
-          <div class="book-info">
-            <span>"Title"</span>
-            <span>Author</span>
-            <span>Page</span>
-          </div>
-          <div class="book-buttons">
-            <button>Read</button>
-            <button>Remove</button>
-          </div>
-        </li>
-      </ul>
+      <ul id="books-list"></ul>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
