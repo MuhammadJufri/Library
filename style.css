@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -21,4 +21,123 @@ header {
 .container {
   width: 100%;
   max-width: 1200px;
+}
+
+main {
+  padding: 35px 20px;
+}
+
+main > button {
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 7px;
+  background-color: transparent;
+  padding: 10px 18px;
+  display: flex;
+  margin: 0 auto;
+  transition: background-color 0.5s ease-in-out;
+}
+
+main > button:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  display: none;
+}
+
+.modal-box {
+  position: absolute;
+  width: 100%;
+  max-width: 250px;
+  background-color: #eee;
+  display: none;
+  padding: 25px;
+  border-radius: 10px;
+  gap: 20px;
+  top: 25%;
+  z-index: 20;
+}
+
+.modal-box form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-box form input {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 7px;
+}
+
+.check-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-box form button[type="submit"] {
+  padding: 8px;
+  background-color: goldenrod;
+  color: white;
+  border: none;
+  border-radius: 7px;
+}
+
+main ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  list-style-type: none;
+  padding-top: 30px;
+  gap: 35px;
+  justify-content: center;
+}
+
+main ul li {
+  background-color: white;
+  padding: 25px 20px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-size: 19px;
+  font-weight: 500;
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.book-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.book-buttons button {
+  border: none;
+  background-color: greenyellow;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 7px;
+}
+
+.book-buttons button:nth-child(2) {
+  background-color: gainsboro;
 }
