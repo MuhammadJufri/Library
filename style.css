@@ -54,10 +54,16 @@ main > button:hover {
   display: none;
 }
 
+.modal {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .modal-box {
   position: absolute;
   width: 100%;
-  max-width: 250px;
+  max-width: 280px;
   background-color: #eee;
   display: none;
   padding: 25px;
@@ -71,13 +77,19 @@ main > button:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
   gap: 15px;
 }
 
 .modal-box form input {
   border: none;
+  width: 100%;
   padding: 10px 15px;
   border-radius: 7px;
+}
+
+.modal-box form input[type='checkbox'] {
+  width: 15px;
 }
 
 .check-list {

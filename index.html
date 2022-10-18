@@ -16,24 +16,26 @@
     <main>
       <button class="addNewBook">+ Add book</button>
       <div class="overlay"></div>
-      <div class="modal-box">
-        <h2>Add new book</h2>
-        <form action="" method="get" class="submitNewBookData">
-          <input type="text" placeholder="Title" class="title" required />
-          <input type="text" placeholder="Author" class="author" required />
-          <input
-            type="number"
-            placeholder="Pages"
-            min="1"
-            class="pages"
-            required
-          />
-          <div class="check-list">
-            <span>Have you read it?</span>
-            <input type="checkbox" class="haveYouReadIt" />
-          </div>
-          <button type="submit">Submit</button>
-        </form>
+      <div class="modal">
+        <div class="modal-box">
+          <h2>Add new book</h2>
+          <form action="" method="get" class="submitNewBookData">
+            <input type="text" placeholder="Title" class="title" required />
+            <input type="text" placeholder="Author" class="author" required />
+            <input
+              type="number"
+              placeholder="Pages"
+              min="1"
+              class="pages"
+              required
+            />
+            <div class="check-list">
+              <span>Have you read it?</span>
+              <input type="checkbox" class="haveYouReadIt" />
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </div>
 
       <ul id="books-list"></ul>
