@@ -40,6 +40,7 @@ submitNewBookData.addEventListener("submit", function (e) {
   authorInput.value = "";
   pagesInput.value = "";
   haveYouReadCheckBox.checked = false;
+  haveYouReadIt = false;
 });
 
 function Book(title, author, pages, read) {
@@ -74,21 +75,34 @@ function displayBooksToHtml() {
             <span>Page ${book.pages}</span>
           </div>
           <div class="book-buttons">
-            <button style="${
-              book.read === false
-                ? "background-color: greenyellow"
-                : "background-color:red"
-            }">${book.read === false ? "Read" : "Unread"}</button>
-            <button class="removeBook" id="${index}">Remove</button>
+            <button onClick="${book.read === false ? `readBook(${myLibrary[index]},${index})` : `unreadBook(${myLibrary[index]},${index})`} style="${book.read === false
+        ? "background-color: greenyellow"
+        : "background-color:red"
+      }">${book.read === false ? "Read" : "Unread"}</button>
+            <button class="removeBook" id="${index}" onClick="removeBook(${index})">Remove</button>
           </div>
         </li>
     `;
   });
   booksList.innerHTML = htmlCode;
+}
 
-  const removeBook = document.querySelector(".removeBook");
-  removeBook.addEventListener("click", function () {
-    const book = document.querySelector(`book${removeBook.id}`);
-    booksList.removeChild(book);
-  });
+function removeBook(id) {
+  const book = document.querySelector(`#book${id}`);
+  booksList.removeChild(book);
+}
+
+
+function readBook(book, idBook) {
+  const readButton = document.querySelector(`#read${id}`);
+  book.read = true;
+  readButton.style.backgroundColor = 'red';
+  readButton.innerHTML = 'Unread';
+}
+
+function unreadBook(book, idBook) {
+  const unreadButton = document.querySelector(`#read${id}`);
+  book.read = false;
+  unreadButton.style.backgroundColor = 'greenyellow';
+  unreadButton.innerHTML = 'Read';
 }
